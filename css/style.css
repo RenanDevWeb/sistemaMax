@@ -1,0 +1,13 @@
+body{
+    background-color: #000;
+}
+
+card{
+    boder: 1px solid #000;
+}
+.posicionamento{
+    position: absolute;
+    top: 20%;
+    left:40%;
+    translate: transform(-50%,50%);
+}
