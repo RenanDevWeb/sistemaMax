@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>To Do APP</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <h1 class="text-center mt-3">To Do APP</h1>
+
+
+<div class="container">
+  <div class="card ">
+    <div class="card-header text-white ">
+      <form method="POST" action="/adicionar" >
+        <div class="row">
+          <div class="col-10">
+            <input class="form-control mb-3" type="text" name="nome" id="nome">
+            <input class="form-control mb-3" type="text" name="telefone1" id="telefone1">
+            <input class="form-control mb-3" type="text" name="telefone2" id="telefone2">
+            <input class="form-control mb-3" type="text" name="email" id="email">
+            <input class="form-control mb-3" type="text" name="cpf" id="cpf">
+          </div>          
+          <div class="col-2"><button class="btn btn-primary ">Adicionar</button></div>
+        </div>
+      </form>
+    </div>
+    <div class="card-body">
+
+      <table class="tabela_de_acoes">
+
+          <tbody >
+  
+            <div class="row">
+              
+              <div class="col-10 mb-0 mt-1  fonte_padrao"> <hr></div>
+              <form method="POST" action="/excluir">
+                <input type="hidden" name="id" value="">
+              <div class="col-2 mb-3"><button  class="btn btn-danger ml-5">Excluir</button><hr></div>
+            </form>
+            </div>
+           
+          </tbody>
+        </table>
+
+    </div>

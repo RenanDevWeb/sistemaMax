@@ -1,9 +1,7 @@
-body{
-    background-color: #000;
-}
+
 
 card{
-    boder: 1px solid #000;
+    border: 1px solid #000;
 }
 .posicionamento{
     position: absolute;
