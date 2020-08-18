@@ -1,0 +1,192 @@
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>Sistema Max</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../public/css/style.css">
+</head>
+  <body>
+    <nav class="navbar  navbar-light bg-light  sticky-top  m-0 p-0 shadow">
+  <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="pages.html">Sistema Max</a>
+  <ul class="navbar-nav ml-5  pl-5 px-4">    
+    <li class="nav-item">
+    <a class="nav-link" href="#"> Usuario logado: Renan Salmazio </a>
+  </li>
+</ul>
+
+  <ul class="navbar-nav px-4">    
+      <li class="nav-item">
+      <a class="nav-link" href="#"> Sair <i class="fa fa-arrow-circle-right"></i></a>
+    </li>
+  </ul>
+  
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light text-dark sidebar  m-0 p-1 fundo-menu-lateral ">
+      <div class="sidebar-sticky pt-3">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" href="./usuario.html">
+                <i class="fa fa-user"> Usuario</i>
+            </a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link active" href="./perfil.html">
+                <i class="fa fa-users"> Cadastrar Perfil</i>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <hr>
+          </li>
+         
+          
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+                <!-- !-- <i class="fa fa-book"> Pedidos</i> --> 
+                <i class="fa fa-cart-plus"> Pedidos</i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <hr>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+                <i class="fa fa-address-book"> Clientes</i>
+            </a>
+          </li>
+           
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+                <i class="fa fa-plus-square"> Cadastrar Clientes</i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <hr>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+                <i class="fa fa-truck"> Fornecedores</i>
+                          </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+                <i class="fa fa-plus-square"> Cadastrar Fornecedores</i>
+              
+            </a>
+          </li>
+          <li class="nav-item">
+            <hr>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+                <i class="fa fa-id-card"> Produtos</i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+                <i class="fa fa-plus-square"> Cadastrar Produtos</i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <hr>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+                <i class="fa fa-calculator"> Cauculadora</i>
+            </a>
+          </li>
+        </ul>
+
+       
+       
+      </div>
+    </nav>
+
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 fundo1">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2 mt-3">Cadastrar Perfil</h1>
+      </div>
+
+      <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-header"><h4>Cadastrar Perfil</h4></div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Nome Perfil</label>
+                                <input type="text" class="form-control" id="nome" aria-describedby="emailHelp" placeholder="Digite o nome do pefil">
+                            </div>
+                              <button type="submit" class="btn btn-primary mt-2">Salvar</button>
+                        </form>
+                      
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-header"><h4>Perfils Cadastrados</h4></div>
+                    <div class="card-body">
+                        <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th>ID</th>
+                                <th>Perfil</th>
+                                <th class="text-center">Ações</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>Administrativo</td>
+                                <td class="text-center">
+                                    <button class="btn btn-warning ml-3">Editar</button>
+                                </td>
+                                <td><button class="btn btn-danger ml-3">Excluir</button></td>
+                              </tr>
+                              <tr>
+                                <td>1</td>
+                                <td>Loja</td>
+                                <td class="text-center">
+                                    <button class="btn btn-warning ml-3">Editar</button>
+                                </td>
+                                <td><button class="btn btn-danger ml-3">Excluir</button></td>
+                              </tr>
+                              
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+            </div>
+
+
+            </div>
+        </div>
+
+
+      </div>
+    </main>
+  </div>
+</div>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
