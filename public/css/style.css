@@ -1,11 +1,44 @@
-
-
-card{
-    border: 1px solid #000;
+body{
+    font-family: 'Ubuntu', sans-serif;
 }
+
 .posicionamento{
     position: absolute;
     top: 20%;
     left:40%;
     translate: transform(-50%,50%);
+}
+
+.fonte1{
+    font-family: 'Ubuntu', sans-serif;
+}
+a{
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+}
+a:hover{
+    color: #000;
+}
+hr{
+    border: 1px solid #696969;
+}
+.card-header{
+    border: 1px solid #000;
+    background-color:#D3D3D3;
+}
+.card-body{
+    border: 1px solid #000;
+    background-color:#FFFFF0
+}
+
+.card-footer{
+    
+    background-color:#D3D3D3;
+}
+.fundo-menu-lateral{
+    background-color: #BEBEBE
+}
+.fundo1{
+    background-color: #F5F5F5;
 }
