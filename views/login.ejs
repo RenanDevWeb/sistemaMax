@@ -7,42 +7,34 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style2.css">
     <title>Sistema max</title>
   </head>
   <body>
-
-
-
-
-
-    <div class="card-body">
-
-        <table class="tabela_de_acoes">
-  
-            <tbody >
-              <% actions.forEach(actions => { %>
-              <div class="row">
-                
-                <div class="col-10 mb-0 mt-1  "> <%= actions.id %> <%= actions.nome %> <%= actions.telefone1 %> <%= actions.telefone2 %> <%= actions.email %> <%= actions.cpf %> <hr>
-                
-                
-                
-                
-                
+    <div class="container posicionamento"> 
+        <div class="card mt-3 " style="width: 18rem;">
+            <div class="card-header">
+              <h5 class="card-title text-center">Login</h5> 
+                <div class="card-body">
+                    <form action="/login" method="GET">
+                        <div class="form-group-login">
+                            <label for="">Nome</label>
+                            <input type="text" name="nome" >
+                        </div>
+                        <div class="form-group-password mt-3">
+                            <label for="">Senha</label>
+                            <input type="text" name="senha">
+                        </div>
+                        <div class="group-buttons ">
+                        <button class="btn btn-primary mt-3">Entrar </button>
+                        </div>
+                    </form>
                 </div>
+             
 
-
-
-
-                <form method="POST" action="/excluir">
-                  <input type="hidden" name="id" value="<%= actions.id %>">
-                <div class="col-2 mb-3"><button  class="btn btn-danger ml-5">Excluir</button><hr></div>
-              </form>
-              </div>
-              <% }) %>
-            </tbody>
-          </table>
+            </div>
+          </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="pt-BR">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -36,13 +36,13 @@
       <div class="sidebar-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link active" href="./usuarios">
-                <i class="fa fa-user"> Usuario</i>
+            <a class="nav-link active" href="./usuario.html">
+                <i class="fa fa-user">   Usuario</i>
             </a>
           </li>
          
           <li class="nav-item">
-            <a class="nav-link active" href="/">
+            <a class="nav-link active" href="./perfil.html">
                 <i class="fa fa-users"> Cadastrar Perfil</i>
             </a>
           </li>
@@ -62,7 +62,7 @@
             <hr>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./cadastrarcliente">
+            <a class="nav-link" href="#">
                 <i class="fa fa-address-book"> Clientes</i>
             </a>
           </li>
@@ -116,47 +116,89 @@
 
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 fundo1">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2 mt-3">Dashboard</h1>
+        <h1 class="h2 mt-3">Cadastrar Usuario</h1>
       </div>
 
       <div class="container">
         <div class="row">
+
             <div class="col-6">
-                <div class="card">
-                    <div class="card-header"><h4>Ultimas Vendas</h4></div>
+                <div class="card mt-0">
+                    <div class="card-header"><h4>Cadastrar Usuario</h4></div>
                     <div class="card-body">
-                        <p class="ml-4">Joao fulano</p>
-                        <p class="ml-4">Pedido nº : 09298575</p>
-                        <hr>
-                        <p class="ml-4">Joao fulano</p>
-                        <p class="ml-4">Pedido nº : 09298575</p>
-                        <hr>
-                        <p class="ml-4">Joao fulano</p>
-                        <p class="ml-4">Pedido nº : 09298575</p>
-                        <hr>
-                        <button class="btn btn-success">Ver Mais</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="card">
-                    <div class="card-header"><h4>Ultimos produtos Cadastrados</h4></div>
-                    <div class="card-body">
-                        <p class="ml-4">Lixadeira</p>
-                        <p class="ml-4">Marca: Makita</p>
-                        <hr>
-                        <p class="ml-4">Lixadeira</p>
-                        <p class="ml-4">Marca: Makita</p>
-                        <hr>
-                        <p class="ml-4">Lixadeira</p>
-                        <p class="ml-4">Marca: Makita</p>
-                        <hr>
-                        <button class="btn btn-success">Ver Mais</button>
+                        <form action="/cadastroUser" method="POST">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Nome</label>
+                                <input type="text" class="form-control" name="nome" aria-describedby="emailHelp" placeholder="Digite Seu nome">
+                                
+                              </div>
+                              <div class="form-group">
+                                <label for="exampleInputPassword1">Senha</label>
+                                <input type="password" class="form-control" name="senha" placeholder="Escolha uma senha">
+                              </div>
+                              
+                              <div class="form-group">
+                                <label for="exampleFormControlSelect1">Perfil</label>
+                                <select class="form-control" id="exampleFormControlSelect1" name="perfil">
+                                  <option>Administrativo</option>
+                                  <option>Loja</option>
+                                </select>
+                              </div>
+
+
+                              <button type="submit" class="btn btn-primary mt-2">Salvar</button>
+                        </form>
                     </div>
                 </div>
             </div>
 
 
+
+            <div class="col-12">
+                <div class="card mt-4">
+                    <div class="card-header"><h4>Usuarios cadastrados</h4></div>
+                    <div class="card-body">
+                        <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th>ID</th>
+                                <th>NOME</th>
+                                <th>SENHA</th>
+                                <th>Perfil</th>
+                                <th class="text-center">Ações</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+
+                              <% dados.forEach(actions => { %>
+                                  <tr>
+                                    <td><%= actions.id %></td>
+                                    <td><%= actions.name %></td>  
+                                    <td><%= actions.password %></td>
+                                  <td><%= actions.perfil %></td>
+                                  <td class="text-center">
+                                    <button class="btn btn-warning ml-3">Editar</button>
+                                    <button class="btn btn-danger ml-3">Excluir</button>
+                                </td>
+                                  </tr>
+                                
+                                 
+                             <% }) %>
+                     
+                               
+
+
+
+
+
+                             
+                              
+                             
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+            </div>
             </div>
         </div>
 

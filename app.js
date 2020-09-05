@@ -4,6 +4,7 @@ const port = 3000
 const connection = require('./database/database')
 const bodyParser = require('body-parser')
 const Cliente = require('./database/Cliente')
+const UserLogin = require('./database/Userlogin')
 
 app.set("view engine", "ejs");
 app.use(express.static('public'));
@@ -18,26 +19,77 @@ connection.authenticate()
 
 
 app.get('/', (req,res)=>{
-    res.render('index');
+    res.render('login');
 })
 
-app.get('/dados',(req,res) => {
-    Cliente.findAll().then(actions => {
-        console.log(actions)
-        res.render('dados',{
-            actions: actions
-        })
-    })
+
+app.get('/login', (req,res)=>{
+    const nome = req.body.nome;
+    const password = req.body.senha;
+    UserLogin.findAll()
+    .then(dados => {
+        if(dados.name === nome && dados.password === password){
+            res.redirect('index')
+        }else
+            res.redirect('login') 
+        
+    }
+       )
+    res.render('index')
+
 })
+
+app.get('/cadastroUser',(req,res) => {
+    res.render('cadastroUser')
+})
+
+
+app.get('/usuarios' , (req,res) => {
+    UserLogin.findAll().then(actions => {
+        res.render('usuarios',{
+            dados: actions,
+        });
+    })
+});
+
+
+
+
+
+
+app.post('/cadastroUser', (req,res)=>{
+    const nome = req.body.nome;
+    const password = req.body.senha;
+    const perfil = req.body.perfil;
+    UserLogin.create({
+        name:nome,
+        password: password,
+        perfil: perfil
+    }).then(()=> res.redirect('/usuarios')).catch((err) => console.log(err))
+    
+})
+
+
+
+
 
 app.get('/index',(req,res) => {
     Cliente.findAll().then(action => {
-        res.render('dados',{
+        res.render('index',{
             actions: action
         });
     })
   
 })
+
+
+app.get('/cadastrarcliente',(req,res) => {
+    res.render('cadastrarcliente')
+})
+
+
+
+
 
 app.post('/adicionar',(req,res)=> {
     const nome = req.body.nome;
@@ -46,7 +98,7 @@ app.post('/adicionar',(req,res)=> {
     const email = req.body.email;
     const cpf = req.body.cpf;
 
-    Cliente.create({
+    Use.create({
         nome:nome,
         telefone1: telefone1,
         telefone2: telefone2,
